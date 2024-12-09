@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <div className="relative w-full max-w-6xl mx-auto px-4 py-12 sm:py-16">
+    <div className="relative w-full max-w-6xl mx-auto px-4 py-12 sm:py-16 bg-black">
       {/* Decorative heading */}
       <span className="block font-['Great_Vibes'] text-xl sm:text-3xl text-[#FF9F0D] text-center">
         Testimonials

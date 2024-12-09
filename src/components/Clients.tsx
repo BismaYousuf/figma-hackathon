@@ -2,7 +2,7 @@ import { ChefHat, Utensils, Pizza } from 'lucide-react';
 
 const Clients: React.FC = () => {
   return (
-    <section className="relative py-12 md:py-24">
+    <section className="relative py-12 md:py-24 bg-black">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center w-full h-full"

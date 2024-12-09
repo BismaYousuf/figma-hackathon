@@ -32,7 +32,7 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-black">
       {/* Section heading */}
       <div className="text-center mb-12 sm:mb-16">
         <span className="font-['Great_Vibes'] text-2xl sm:text-3xl text-[#FF9F0D]">Blog Post</span>

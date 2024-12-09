@@ -9,29 +9,34 @@ export default function NotFound() {
     <>
     <Header />
 
-<div className="relative w-[1920px] h-[410px] bg-black m-auto">
-  {/* Background Image */}
-  <Image
-    src={'/menubg.png'}
-    alt={'Menu Background'}
-    width={1920}
-    height={410}
-    className="absolute top-0 left-0 w-full h-full object-cover"
-  />
+    <div className="relative w-full h-[410px] bg-black m-auto">
+        {/* Background Image */}
+        <Image
+          src={'/menubg.png'}
+          alt={'Menu Background'}
+          layout="fill"
+          objectFit="cover"
+          className="absolute top-0 left-0 w-full h-full"
+        />
 
-  {/* Heading on Top of Image */}
-  <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
-    {/* Heading */}
-    <h1 className="text-[48px] font-bold text-white">404 Error</h1>
+        {/* Heading on Top of Image */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4 px-4 sm:px-6 md:px-8">
+          {/* Heading */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center">
+            Our Menu
+          </h1>
 
-    {/* Paragraph with Hover Effect */}
-    <p className="text-[16px] text-white flex items-center space-x-2 group">
-      <span className="transition-colors duration-300">Home</span>
-      <ChevronRight size={16} className="text-white transition-colors duration-300 group-hover:text-orange-500" />
-      <span className="transition-colors duration-300 text-orange-500">Error</span>
-    </p>
-  </div>
-</div>
+          {/* Paragraph with Hover Effect */}
+          <p className="text-sm sm:text-base text-white flex items-center space-x-2 group">
+            <span className="transition-colors duration-300">Home</span>
+            <ChevronRight
+              size={16}
+              className="text-white transition-colors duration-300 group-hover:text-orange-500"
+            />
+            <span className="transition-colors duration-300 text-orange-500">Menu</span>
+          </p>
+        </div>
+      </div>
 
     <main className="min-h-screen flex flex-col items-center justify-center px-4 -mt-[120px] -mb-[120px]">
       <div className="max-w-[630px] text-center">

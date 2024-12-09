@@ -72,32 +72,34 @@ export default function ShoppingCart() {
 
   return (
     <>       <Header />
-    <div className="relative w-[1920px] h-[410px] bg-black m-auto">
-      {/* Background Image */}
-      <Image
-        src={'/menubg.png'} // Ensure the background image is correct
-        alt={'Menu Background'}
-        width={1920}
-        height={410}
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      />
+   <div className="relative w-full h-[410px] bg-black m-auto">
+        {/* Background Image */}
+        <Image
+          src={'/menubg.png'}
+          alt={'Menu Background'}
+          layout="fill"
+          objectFit="cover"
+          className="absolute top-0 left-0 w-full h-full"
+        />
 
-      {/* Heading on Top of Image */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
-        {/* Heading */}
-        <h1 className="text-[48px] font-bold text-white">Shopping Card</h1>
+        {/* Heading on Top of Image */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4 px-4 sm:px-6 md:px-8">
+          {/* Heading */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center">
+            Our Menu
+          </h1>
 
-        {/* Paragraph with Hover Effect */}
-        <p className="text-[16px] text-white flex items-center space-x-2 group">
-          <span className="transition-colors duration-300">Home</span>
-          <ChevronRight
-            size={16}
-            className="text-white transition-colors duration-300 group-hover:text-orange-500"
-          />
-          <span className="transition-colors duration-300 text-orange-500">Shopping Cart</span>
-        </p>
+          {/* Paragraph with Hover Effect */}
+          <p className="text-sm sm:text-base text-white flex items-center space-x-2 group">
+            <span className="transition-colors duration-300">Home</span>
+            <ChevronRight
+              size={16}
+              className="text-white transition-colors duration-300 group-hover:text-orange-500"
+            />
+            <span className="transition-colors duration-300 text-orange-500">Menu</span>
+          </p>
+        </div>
       </div>
-    </div>
     <div className="w-full max-w-6xl mx-auto p-4">
       <div className="grid grid-cols-12 gap-4 mb-4 text-sm font-bold text-gray-700">
         <div className="col-span-6 md:col-span-6">Product</div>

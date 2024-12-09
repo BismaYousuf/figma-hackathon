@@ -76,7 +76,7 @@ export default function MeetOurChefs() {
         <div className="text-center mb-16">
           <span className={`${greatVibes.className} text-[#FF9F0D] text-3xl`}>Chefs</span>
           <h2 className="text-5xl font-bold mt-2 text-white">
-            <span className="text-[#FF9F0D]">Me</span>et Our Chef
+            <span className="text-[#FF9F0D]">Meet Our Chef</span>
           </h2>
         </div>
 
@@ -89,7 +89,7 @@ export default function MeetOurChefs() {
 
         <div className="text-center mt-12">
           <Link href="/chefs">
-            <button className="border border-[#FF9F0D] text-white rounded-full px-8 py-3 hover:bg-[#FF9F0D] transition-colors">
+            <button className="border border-[#FF9F0D] text-orange-500 rounded-full px-8 py-3 hover:bg-[#fff] transition-colors">
               See More
             </button>
           </Link> 

@@ -11,7 +11,7 @@ export default function Testimonials() {
       </span>
 
       {/* Main heading */}
-      <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white text-center mt-2 sm:mt-4 mb-10">
+      <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-black text-center mt-2 sm:mt-4 mb-10">
         What our client are saying
       </h2>
 

@@ -15,21 +15,24 @@ interface ChefCardProps {
 
 function ChefCard({ name, role, image }: ChefCardProps) {
   return (
-    <div className="relative w-full">
-      <div className="aspect-[4/5] relative overflow-hidden rounded-md">
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover"
-          sizes="(min-width: 1280px) 312px, (min-width: 768px) 25vw, 80vw"
-        />
-      </div>
-      <div className="absolute bottom-0 left-0 w-[58%] bg-white py-3 px-5 rounded-bl-md">
-        <h3 className="font-bold text-lg text-gray-800">{name}</h3>
-        <p className="text-sm text-gray-800">{role}</p>
-      </div>
-    </div>
+<div className="relative w-full">
+  <div className="relative overflow-hidden rounded-md w-full max-w-[250px] mx-auto">
+    <Image
+      src={image}
+      alt={name}
+      width={500}
+      height={500}
+      className="object-cover w-full h-auto"
+      sizes="(min-width: 1280px) 312px, (min-width: 768px) 50vw, 80vw"
+    />
+  </div>
+  <div className="absolute bottom-0 left-0 w-full bg-white py-3 px-4 sm:px-5 rounded-bl-md">
+    <h3 className="font-bold text-lg sm:text-xl text-gray-800">{name}</h3>
+    <p className="text-sm sm:text-base text-gray-800">{role}</p>
+  </div>
+</div>
+
+
   )
 }
 
@@ -77,19 +80,21 @@ export default function MeetOurChefs() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {/* Chef Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {chefs.map((chef) => (
             <ChefCard key={chef.name} {...chef} />
           ))}
         </div>
 
         <div className="text-center mt-12">
-        <Link href="/chefs"> <button className="border border-[#FF9F0D] text-white rounded-full px-8 py-3 hover:bg-[#FF9F0D] transition-colors">
-            See More
-          </button></Link> 
+          <Link href="/chefs">
+            <button className="border border-[#FF9F0D] text-white rounded-full px-8 py-3 hover:bg-[#FF9F0D] transition-colors">
+              See More
+            </button>
+          </Link> 
         </div>
       </div>
     </section>
   )
 }
-

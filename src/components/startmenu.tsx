@@ -1,6 +1,5 @@
-import { Coffee } from 'lucide-react'
-import Image from 'next/image'
-
+import { Coffee } from 'lucide-react';
+import Image from 'next/image';
 
 export default function StarterMenu() {
   const menuItems = [
@@ -28,15 +27,14 @@ export default function StarterMenu() {
       calories: "560 CAL",
       price: "35"
     }
-  ]
-  
+  ];
 
   return (
     <div className="bg-white min-h-screen p-8 text-black mt-[120px]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-12">
           <Coffee className="w-6 h-6 text-[#FF9F0D]" />
-          <h1 className="text-4xl font-bold text-black">Starter Menu</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-black">Starter Menu</h1>
         </div>
         
         <div className="flex flex-col md:flex-row gap-8">
@@ -53,8 +51,8 @@ export default function StarterMenu() {
             {menuItems.map((item, index) => (
               <div key={index} className="border-b border-dashed border-gray-700 pb-8">
                 <div className="flex justify-between items-start">
-                  <h2 className="text-2xl font-bold mb-2">{item.name}</h2>
-                  <span className="text-2xl font-bold text-[#FF9F0D]">{item.price}$</span>
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">{item.name}</h2>
+                  <span className="text-xl sm:text-2xl font-bold text-[#FF9F0D]">{item.price}$</span>
                 </div>
                 <p className="text-gray-400 mb-2">{item.description}</p>
                 <span className="text-gray-500 text-sm">{item.calories}</span>
@@ -64,6 +62,5 @@ export default function StarterMenu() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

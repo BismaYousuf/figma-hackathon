@@ -1,5 +1,5 @@
-import { Check } from 'lucide-react'
-import Image from 'next/image'
+import { Check } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -45,6 +45,7 @@ export default function AboutUs() {
                 width={660}
                 height={330}
                 className="w-full h-full object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 660px"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -55,6 +56,7 @@ export default function AboutUs() {
                   width={322}
                   height={149}
                   className="w-full h-full object-cover"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 322px"
                 />
               </div>
               <div className="h-48 rounded-lg overflow-hidden">
@@ -64,6 +66,7 @@ export default function AboutUs() {
                   width={322}
                   height={149}
                   className="w-full h-full object-cover"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 322px"
                 />
               </div>
             </div>
@@ -71,6 +74,5 @@ export default function AboutUs() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

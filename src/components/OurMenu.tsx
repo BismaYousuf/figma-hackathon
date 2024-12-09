@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import { Great_Vibes as GreatVibes } from 'next/font/google'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 const greatVibes = GreatVibes({ 
@@ -96,15 +97,19 @@ export default function MenuSection() {
         </nav>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-1">
-            <div className="relative aspect-square rounded-lg overflow-hidden">
-              <img
-                src="/00.png"
-                alt="Featured dish"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
+        <div className="lg:col-span-1 sm:w-40 md:w-96 lg:w-[366px]">
+  <div className="relative aspect-square rounded-lg overflow-hidden">
+    <Image
+      src="/00.png"
+      alt="Featured dish"
+      width={366}
+      height={362}
+      className="object-cover w-full h-full"
+    />
+  </div>
+</div>
+
+
 
           <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
             {menuItems.map((item) => (

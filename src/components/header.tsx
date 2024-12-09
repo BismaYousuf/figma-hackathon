@@ -1,5 +1,7 @@
+'use client'
 import Link from 'next/link';
-import { ShoppingBag, Search, UserRound } from 'lucide-react';
+import { ShoppingBag, Search, UserRound, Menu } from 'lucide-react';
+import { useState } from 'react';
 
 interface NavItemProps {
   href: string;
@@ -8,6 +10,8 @@ interface NavItemProps {
 }
 
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="absolute top-0 left-0 w-full z-10 py-6 bg-black">
       <div className="flex items-center justify-between max-w-[1320px] mx-auto px-4">
@@ -16,8 +20,15 @@ export function Header() {
           Food<span className="text-white">tuck</span>
         </Link>
 
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden flex items-center">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            <Menu className="text-white" size={24} />
+          </button>
+        </div>
+
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8">
+        <div className={`md:flex space-x-8 ${menuOpen ? 'block' : 'hidden'} md:block`}>
           <NavItem href="/" active>
             Home
           </NavItem>
@@ -32,7 +43,9 @@ export function Header() {
         {/* Icons */}
         <div className="flex items-center space-x-6">
           <Search className="text-white cursor-pointer" size={24} />
-       <Link href={'/signinform'}> <UserRound className="text-white cursor-pointer" size={24} /></Link>  
+          <Link href={'/signinform'}>
+            <UserRound className="text-white cursor-pointer" size={24} />
+          </Link>
           <ShoppingBag className="text-white cursor-pointer" size={24} />
         </div>
       </div>
@@ -44,9 +57,7 @@ function NavItem({ href, children, active = false }: NavItemProps) {
   return (
     <Link
       href={href}
-      className={`text-base ${
-        active ? 'text-orange-500' : 'text-white'
-      } hover:text-orange-500 transition-colors relative ${
+      className={`text-base ${active ? 'text-orange-500' : 'text-white'} hover:text-orange-500 transition-colors relative ${
         active
           ? 'after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-orange-500 after:rounded-full'
           : ''

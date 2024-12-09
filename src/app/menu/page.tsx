@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import Clients from '@/components/Clients';
+import MenuSection from '@/components/menu';
 
 
 function MenuHero() {
@@ -34,10 +35,12 @@ function MenuHero() {
   </p>
 </div>
       </div>
-
       <StarterMenu />
+     < MenuSection/>
       <Clients/>
-       <StarterMenu />
+      <StarterMenu />
+      < MenuSection/>
+      
 
 
     </>

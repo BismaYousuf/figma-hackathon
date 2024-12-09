@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Great_Vibes } from 'next/font/google'
+import Link from "next/link"
 
 const greatVibes = Great_Vibes({ 
   weight: '400',
@@ -83,9 +84,9 @@ export default function MeetOurChefs() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="border border-[#FF9F0D] text-white rounded-full px-8 py-3 hover:bg-[#FF9F0D] transition-colors">
+        <Link href="/chefs"> <button className="border border-[#FF9F0D] text-white rounded-full px-8 py-3 hover:bg-[#FF9F0D] transition-colors">
             See More
-          </button>
+          </button></Link> 
         </div>
       </div>
     </section>

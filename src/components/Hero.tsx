@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image';
 import { Navbar } from "./navbar";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -19,9 +20,9 @@ export function Hero() {
             <p className="text-white text-lg max-w-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue
             </p>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 rounded-full text-lg">
+            <Link href={'/signupForm'}><Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 rounded-full text-lg">
               See Menu
-            </Button>
+            </Button></Link>
           </div>
           <div className="relative hidden md:block  pt-[198px]">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500p]"></div>

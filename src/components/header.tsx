@@ -23,16 +23,16 @@ export function Header() {
           </NavItem>
           <NavItem href="/menu">Menu</NavItem>
           <NavItem href="/blog">Blog</NavItem>
-          <NavItem href="/pages">Pages</NavItem>
-          <NavItem href="/about">About</NavItem>
-          <NavItem href="/shop">Shop</NavItem>
-          <NavItem href="/contact">Contact</NavItem>
+          <NavItem href="/not-found">Pages</NavItem>
+          <NavItem href="/aboutSection">About</NavItem>
+          <NavItem href="/ourshop">Shop</NavItem>
+          <NavItem href="/signupForm">Contact</NavItem>
         </div>
 
         {/* Icons */}
         <div className="flex items-center space-x-6">
           <Search className="text-white cursor-pointer" size={24} />
-          <UserRound className="text-white cursor-pointer" size={24} />
+       <Link href={'/signinform'}> <UserRound className="text-white cursor-pointer" size={24} /></Link>  
           <ShoppingBag className="text-white cursor-pointer" size={24} />
         </div>
       </div>

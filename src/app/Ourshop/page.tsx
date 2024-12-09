@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
+import Link from 'next/link'
 
 export default function ShopPage() {
   const [priceRange, setPriceRange] = useState([0, 8000])
@@ -106,13 +107,13 @@ export default function ShopPage() {
               {[...Array(15)].map((_, i) => (
                 <Card key={i} className="overflow-hidden">
                   <div className="relative">
-                    <Image
+               <Link href='/ShopDetailed'><Image
                       src="/Mask Group (5).png"
                       alt="Product"
                       width={300}
                       height={200}
                       className="w-full h-[200px] object-cover"
-                    />
+                    /></Link>     
                   </div>
                   <CardContent className="p-4">
                     <h3 className="font-bold mb-2">Fresh Lime</h3>
@@ -127,6 +128,7 @@ export default function ShopPage() {
           </div>
         </div>
       </div>
+    
     </>
   )
 }

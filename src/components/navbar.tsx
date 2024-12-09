@@ -22,10 +22,10 @@ export function Navbar() {
             <NavItem href="/" active>Home</NavItem>
             <NavItem href="/menu">Menu</NavItem>
             <NavItem href="/blog">Blog</NavItem>
-            <NavItem href="/pages">Pages</NavItem>
-            <NavItem href="/about">About</NavItem>
-            <NavItem href="/Ourshop">Shop</NavItem>
-            <NavItem href="/contact">Contact</NavItem>
+            <NavItem href="/not-found">Pages</NavItem>
+            <NavItem href="/aboutSection">About</NavItem>
+            <NavItem href="/ourshop">Shop</NavItem>
+            <NavItem href="/signupForm">Contact</NavItem>
           </div>
           <div className="flex items-center space-x-4">
             <div className="relative hidden md:block">

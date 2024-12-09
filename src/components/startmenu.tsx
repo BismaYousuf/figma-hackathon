@@ -1,6 +1,6 @@
 import { Coffee } from 'lucide-react'
 import Image from 'next/image'
-import StarterMenu2 from './menuitems'
+
 
 export default function StarterMenu() {
   const menuItems = [
@@ -32,7 +32,7 @@ export default function StarterMenu() {
   
 
   return (
-    <div className="bg-white min-h-screen p-8 text-black">
+    <div className="bg-white min-h-screen p-8 text-black mt-[120px]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-12">
           <Coffee className="w-6 h-6 text-[#FF9F0D]" />
@@ -63,7 +63,6 @@ export default function StarterMenu() {
           </div>
         </div>
       </div>
-    <  StarterMenu2/>
     </div>
   )
 }

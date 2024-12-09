@@ -1,133 +1,104 @@
-import {
-  ArrowUpRight,
-  Badge,
-  Calendar,
-  ChevronRight,
-  Facebook,
-  Instagram,
-  MessageCircle,
-  Search,
-  Star,
-  Twitter,
-  UserPlus,
-  Youtube,
-} from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
-import Image from "next/image";
-import { Header } from "@/components/header";
+import Image from "next/image"
+import { Calendar, MessageSquare, UserCircle2, ArrowUpRight, ChevronRight } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Header } from "@/components/header"
+import BlogSidebar from "@/components/blogsidebar"
+import BlogCard2 from "@/components/blogCard2"
+import BlogCard3 from "@/components/blogCard3"
 
 export default function BlogCard() {
   return (
     <>
-      <Header />
+       <Header />
+    <div className="relative w-[1920px] h-[410px] bg-black m-auto">
+      {/* Background Image */}
+      <Image
+        src={'/menubg.png'} // Ensure the background image is correct
+        alt={'Menu Background'}
+        width={1920}
+        height={410}
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
 
-      <div className="relative w-[1920px] h-[410px] bg-black m-auto">
-        {/* Background Image */}
+      {/* Heading on Top of Image */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
+        {/* Heading */}
+        <h1 className="text-[48px] font-bold text-white">Blog List</h1>
+
+        {/* Paragraph with Hover Effect */}
+        <p className="text-[16px] text-white flex items-center space-x-2 group">
+          <span className="transition-colors duration-300">Home</span>
+          <ChevronRight
+            size={16}
+            className="text-white transition-colors duration-300 group-hover:text-orange-500"
+          />
+          <span className="transition-colors duration-300 text-orange-500">Blog</span>
+        </p>
+      </div>
+    </div>
+    <div className="flex flex-row mt-[120px] ml-[300px] gap-4">
+  {/* Main Content Area */}
+  <div className="flex-2 flex flex-col gap-4 mt-[120px]">
+    <Card className="max-w-[872px] overflow-hidden">
+      {/* Card Content */}
+      <div className="relative">
         <Image
-          src={'/menubg.png'}
-          alt={'Menu Background'}
-          width={1920}
-          height={410}
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="/blog1.png"
+          alt="Blog featured image"
+          width={872}
+          height={520}
+          className="w-full object-cover"
         />
-
-        {/* Heading on Top of Image */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4">
-          {/* Heading */}
-          <h1 className="text-[48px] font-bold text-white">Our Menu</h1>
-
-          {/* Paragraph with Hover Effect */}
-          <p className="text-[16px] text-white flex items-center space-x-2 group">
-            <span className="transition-colors duration-300">Home</span>
-            <ChevronRight size={16} className="text-white transition-colors duration-300 group-hover:text-orange-500" />
-            <span className="transition-colors duration-300 text-orange-500">Menu</span>
-          </p>
+        <div className="absolute left-6 top-6 bg-[#FF9F0D] text-white rounded-md p-2 flex flex-col items-center">
+          <span className="text-lg font-bold">14</span>
+          <span className="text-sm">Feb</span>
         </div>
       </div>
-
-      <Card className="max-w-[872px] overflow-hidden mt-[120px]">
-        <div className="relative">
-          <Image
-            src="/blog1.png"
-            alt="Delicious tacos with fresh vegetables"
-            width={872}
-            height={520}
-            className="w-full h-[520px] object-cover"
-          />
-          <div className="absolute top-6 left-6 bg-[#FF9F0D] text-white p-2 rounded-md flex flex-col items-center justify-center">
-            <span className="text-lg font-bold">14</span>
-            <span className="text-sm">Feb</span>
+      <CardContent className="p-8">
+        <div className="flex items-center gap-6 text-gray-600 mb-4">
+          <div className="flex items-center gap-2">
+            <Calendar className="w-6 h-6 stroke-[#FF9F0D]" />
+            <span>Feb 14, 2022</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MessageSquare className="w-6 h-6 stroke-[#FF9F0D]" />
+            <span>3</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <UserCircle2 className="w-6 h-6 stroke-[#FF9F0D]" />
+            <span>Admin</span>
           </div>
         </div>
-        <CardContent className="p-6">
-          {/* Content here */}
-        </CardContent>
-      </Card>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          10 Reasons To Do A Digital Detox Challenge
+        </h2>
+        <p className="text-gray-600 mb-6 leading-relaxed">
+          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+          no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+          dolore magna aliquyam erat
+        </p>
+        <Button 
+          variant="outline" 
+          className="text-[#FF9F0D] border-[#FF9F0D] hover:bg-[#FF9F0D] hover:text-white"
+        >
+          Read More
+          <ArrowUpRight className="ml-2 h-4 w-4" />
+        </Button>
+      </CardContent>
+    </Card>
+    <BlogCard2 />
+    <BlogCard3/>
+  </div>
 
-      {/* Replace all img with Image in similar patterns */}
-      <aside className="w-full max-w-[424px] space-y-8">
-        {/* Search */}
-        <div className="relative">
-          <Input placeholder="Search Your Keyword.." className="pr-12" />
-          <Button size="icon" className="absolute right-0 top-0 h-full rounded-l-none bg-[#FF9F0D] hover:bg-[#FF9F0D]/90">
-            <Search className="h-4 w-4" />
-          </Button>
-        </div>
+  {/* Sidebar */}
+  <div>
+    <BlogSidebar />
+  </div>
+</div>
 
-        {/* Profile Card */}
-        <Card>
-          <CardContent className="pt-6 text-center">
-            <Avatar className="h-24 w-24 mx-auto">
-              <AvatarImage src="/placeholder.svg" alt="Prince Miyako" />
-              <AvatarFallback>PM</AvatarFallback>
-            </Avatar>
-          </CardContent>
-        </Card>
-
-        {/* Recent Posts */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Recent Post</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {[1, 2, 3, 4].map((post) => (
-              <div key={post} className="flex gap-4">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Food"
-                  width={96}
-                  height={80}
-                  className="h-20 w-24 rounded-md object-cover"
-                />
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-
-        {/* Photo Gallery */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Photo Gallery</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-3 gap-2">
-              {[...Array(6)].map((_, i) => (
-                <Image
-                  key={i}
-                  src="/placeholder.svg"
-                  alt={`Gallery ${i + 1}`}
-                  width={100}
-                  height={100}
-                  className="aspect-square rounded-md object-cover"
-                />
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </aside>
     </>
-  );
+  )
 }
+

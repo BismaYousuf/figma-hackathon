@@ -62,11 +62,5 @@ export function Hero() {
   )
 }
 
-function SocialIcon({ icon }: { icon: React.ReactNode }) {
-  return (
-    <div className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-white hover:bg-orange-500 hover:border-orange-500 transition-colors cursor-pointer">
-      {icon}
-    </div>
-  )
-}
+
 

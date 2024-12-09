@@ -23,7 +23,7 @@ export function Hero() {
       <div className="relative container mx-auto px-4 py-16 md:py-32 min-h-screen flex items-center">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6 md:space-y-8 text-center md:text-left">
-            <p className="text-2xl md:text-3xl text-orange-500 font-['Great_Vibes']">It's Quick & Amusing!</p>
+            <p className="text-2xl md:text-3xl text-orange-500 font-['Great_Vibes']">It&apos;s Quick & Amusing!</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               The Art of speed <br /><span className="text-orange-500">food Quality</span>
             </h1>

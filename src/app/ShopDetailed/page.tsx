@@ -6,17 +6,10 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
 import { Header } from "@/components/header"
-import { FaFacebook, FaFacebookF, FaInstagram, FaTwitter, FaVk } from "react-icons/fa"
+import {  FaFacebookF, FaInstagram, FaTwitter, FaVk } from "react-icons/fa"
 import { FiYoutube } from "react-icons/fi"
 import ProductDescription from "@/components/productDescription"
 import SimilarProducts from "@/components/similarProducts"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
 import Link from "next/link"
 
 export default function ProductDetail() {

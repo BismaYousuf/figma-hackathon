@@ -1,8 +1,8 @@
-import { Inter } from 'next/font/google'
+
 import { Great_Vibes as GreatVibes } from 'next/font/google'
 import Image from 'next/image'
 
-const inter = Inter({ subsets: ['latin'] })
+
 const greatVibes = GreatVibes({ 
   weight: '400',
   subsets: ['latin'],
@@ -114,7 +114,7 @@ export default function MenuSection() {
           <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
             {menuItems.map((item) => (
               <div key={item.name} className="flex gap-4 items-start">
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
                   className="w-20 h-20 rounded-lg object-cover"

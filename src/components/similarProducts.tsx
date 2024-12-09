@@ -1,4 +1,4 @@
-import { ArrowRight, GitCompareIcon as GitDiff, Heart, ShoppingBag } from 'lucide-react';
+import {  GitCompareIcon as GitDiff, Heart, ShoppingBag } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,

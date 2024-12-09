@@ -4,7 +4,7 @@ import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
-import { User, Mail, Lock, ChevronRight } from 'lucide-react'
+import {  Mail, Lock, ChevronRight } from 'lucide-react'
 import Image from "next/image"
 import { Header } from "@/components/header"
 

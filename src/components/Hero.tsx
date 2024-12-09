@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 import Image from 'next/image'
 import { Navbar } from "./navbar"
 import Link from "next/link"

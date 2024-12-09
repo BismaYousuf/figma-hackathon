@@ -61,7 +61,7 @@ export default function MeetOurChefs() {
   ]
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-black">
       {/* Decorative leaf */}
       <div className="absolute -left-24 top-1/2 -translate-y-1/2 w-72 h-72 opacity-20">
         <Image
@@ -76,7 +76,7 @@ export default function MeetOurChefs() {
         <div className="text-center mb-16">
           <span className={`${greatVibes.className} text-[#FF9F0D] text-3xl`}>Chefs</span>
           <h2 className="text-5xl font-bold mt-2 text-white">
-            <span className="text-[#FF9F0D]">Meet Our Chef</span>
+            <span className="text-[#FF9F0D]">Me</span>et Our Chef
           </h2>
         </div>
 

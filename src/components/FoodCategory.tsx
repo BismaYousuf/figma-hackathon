@@ -23,34 +23,34 @@ export default function FoodCategory() {
   ];
 
   return (
-    <section className="py-24 bg-black">
-      <div className="relative container mx-auto px-4 w-[1320px] h-[489px]">
+    <section className="py-12 md:py-24 bg-black">
+      <div className="container mx-auto px-4 max-w-[1320px]">
         {/* Header */}
-        <div className="text-center mb-12">
-          <span className="font-['Great_Vibes'] text-[#FF9F0D] text-3xl block mb-2">
+        <div className="text-center mb-8 md:mb-12">
+          <span className="font-['Great_Vibes'] text-[#FF9F0D] text-2xl md:text-3xl block mb-2">
             Food Category
           </span>
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             <span className="text-[#FF9F0D]">Ch</span>
             <span className="text-white">oose Food Item</span>
           </h2>
         </div>
 
         {/* Food Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {foodItems.map((item, index) => (
             <div
               key={index}
               className={`relative group ${index === 0 ? "bg-orange-400" : ""}`}
             >
               {/* Image Container */}
-              <div className="relative h-[329px] rounded-lg overflow-hidden">
+              <div className="relative h-[200px] md:h-[329px] rounded-lg overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.alt}
-                  width={305}
-                  height={328}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 group-hover:scale-110"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -58,9 +58,9 @@ export default function FoodCategory() {
 
               {/* Title Box (Only for first image) */}
               {index === 0 && item.title && (
-                <div className="absolute bottom-4 left-4 right-4">
+                <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4">
                   <div className="font-bold rounded-md">
-                    <h3 className="text-xl text-white bg-orange-400 w-[206px] h-[46px] p-4">
+                    <h3 className="text-lg md:text-xl text-white bg-orange-400 w-full md:w-[206px] h-[40px] md:h-[46px] p-2 md:p-4 flex items-center justify-center md:justify-start">
                       {item.title}
                     </h3>
                   </div>
@@ -69,8 +69,8 @@ export default function FoodCategory() {
 
               {/* Discount Badge - Only for first item */}
               {index === 0 && item.discount && (
-                <div className="absolute top-4 right-4">
-                  <div className="bg-white text-[#FF9F0D] font-bold px-4 py-2 rounded-md">
+                <div className="absolute top-2 md:top-4 right-2 md:right-4">
+                  <div className="bg-white text-[#FF9F0D] font-bold px-2 md:px-4 py-1 md:py-2 rounded-md text-sm md:text-base">
                     {item.discount}
                   </div>
                 </div>
@@ -81,19 +81,20 @@ export default function FoodCategory() {
       </div>
 
       {/* Background Image */}
-      {/* <div className="relative w-full h-screen overflow-hidden">
+      <div className="hidden md:block relative w-full h-screen overflow-hidden">
         <div
           className="absolute w-[444.1px] h-[532.3px] left-[1472px] -top-[249.49px]"
           style={{
             transform: "rotate(6.86deg)",
             backgroundImage: 'url("/bgleave.png")',
-            backgroundSize: "contain", // Change to contain to fit image within the div without cropping
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
           aria-hidden="true"
         />
-      </div> */}
+      </div>
     </section>
   );
 }
+

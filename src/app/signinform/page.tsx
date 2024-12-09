@@ -26,7 +26,7 @@ export default function SignUpForm() {
         <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4 px-4 sm:px-6 md:px-8">
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center">
-            Our Menu
+            Sign In Form
           </h1>
 
           {/* Paragraph with Hover Effect */}
@@ -36,7 +36,7 @@ export default function SignUpForm() {
               size={16}
               className="text-white transition-colors duration-300 group-hover:text-orange-500"
             />
-            <span className="transition-colors duration-300 text-orange-500">Menu</span>
+            <span className="transition-colors duration-300 text-orange-500">Sign In</span>
           </p>
         </div>
       </div>

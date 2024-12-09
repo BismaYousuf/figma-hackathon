@@ -47,7 +47,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="hidden md:block absolute w-[158px] h-0 left-2 top-1/4 bg-white border border-white rotate-90"></div>
+      {/* <div className="hidden md:block absolute w-[158px] h-0 left-2 top-1/4 bg-white border border-white rotate-90"></div> */}
       <div className="flex md:hidden justify-center space-x-6 mt-8">
         <SocialIcon icon={<FaFacebook size={16} />} />
         <SocialIcon icon={<FaTwitter size={16} />} />
@@ -58,7 +58,7 @@ export function Hero() {
         <SocialIcon icon={<FaTwitter size={16} />} />
         <SocialIcon icon={<FaInstagram size={16} />} />
       </div>
-      <div className="hidden md:block absolute w-[158px] h-0 left-2 bottom-1/4 bg-white border border-white rotate-90"></div>
+      {/* <div className="hidden md:block absolute w-[158px] h-0 left-2 bottom-1/4 bg-white border border-white rotate-90"></div> */}
     </div>
   )
 }

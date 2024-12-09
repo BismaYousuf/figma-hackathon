@@ -1,6 +1,5 @@
 import { Coffee } from 'lucide-react'
 import Image from 'next/image'
-import MenuSectionn from './menuitems'
 
 export default function StarterMenu2() {
   const menuItems = [

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { ChevronRight, Search, Heart, ShoppingBag, Star } from 'lucide-react'
+import { ChevronRight, Search} from 'lucide-react'
 import { Header } from '@/components/header'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"

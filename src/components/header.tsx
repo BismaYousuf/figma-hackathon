@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import { ShoppingBag, Search, UserRound } from 'lucide-react';
 
+interface NavItemProps {
+  href: string;
+  children: React.ReactNode;
+  active?: boolean;
+}
+
 export function Header() {
   return (
     <nav className="absolute top-0 left-0 w-full z-10 py-6 bg-black">
@@ -34,7 +40,7 @@ export function Header() {
   );
 }
 
-function NavItem({ href, children, active = false }: any) {
+function NavItem({ href, children, active = false }: NavItemProps) {
   return (
     <Link
       href={href}

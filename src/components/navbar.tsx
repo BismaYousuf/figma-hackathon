@@ -2,6 +2,12 @@ import Link from 'next/link'
 import { Input } from "@/components/ui/input"
 import { ShoppingBag, Search } from 'lucide-react'
 
+interface NavItemProps {
+  href: string;
+  children: React.ReactNode;
+  active?: boolean;
+}
+
 export function Navbar() {
   return (
     <nav className="absolute top-0 left-0 w-full z-10 py-11">
@@ -10,9 +16,9 @@ export function Navbar() {
           <Link href="/" className="text-2xl font-bold text-orange-500">
             Food<span className='text-white'>tuck</span> 
           </Link>
-          </div>
-          <div className='flex items-center justify-between'>
-          <div className=" hidden md:flex space-x-8">
+        </div>
+        <div className="flex items-center justify-between">
+          <div className="hidden md:flex space-x-8">
             <NavItem href="/" active>Home</NavItem>
             <NavItem href="/menu">Menu</NavItem>
             <NavItem href="/blog">Blog</NavItem>
@@ -32,14 +38,13 @@ export function Navbar() {
             </div>
             <ShoppingBag className="text-white" size={24} />
           </div>
-          </div>
-       
+        </div>
       </div>
     </nav>
   )
 }
 
-function NavItem({ href, children, active = false }: any) {
+function NavItem({ href, children, active = false }: NavItemProps) {
   return (
     <Link 
       href={href} 
@@ -49,4 +54,3 @@ function NavItem({ href, children, active = false }: any) {
     </Link>
   )
 }
-

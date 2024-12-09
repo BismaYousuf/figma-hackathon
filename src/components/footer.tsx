@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Clock, MessageCircle, PinIcon as Pinterest } from 'lucide-react'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube} from 'react-icons/fa'
-import Image from "next/image" 
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import Image from "next/image"
 import Link from "next/link"
 
 const recentPosts = [
@@ -31,22 +31,21 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div className="max-w-xl">
             <h2 className="text-[#FF9F0D] text-3xl font-bold mb-2">
-              Still You Need Our Support ?
+              Still You Need Our Support &amp;?
             </h2>
             <p className="text-white/80">
-              Don't wait make a smart & logical quote here. Its pretty easy.
+              Don&apos;t wait make a smart &amp; logical quote here. Its pretty easy.
             </p>
           </div>
           <div className="w-full md:w-auto flex">
-            <Input 
-              type="email" 
-              placeholder="Enter Your Email" 
+            <Input
+              type="email"
+              placeholder="Enter Your Email"
               className="bg-[#FF9F0D] border-0 text-white placeholder:text-white/60 rounded-none"
             />
             <Button className="bg-white text-[#FF9F0D] hover:bg-white/90 rounded-none">
-  Subscribe Now
-</Button>
-
+              Subscribe Now
+            </Button>
           </div>
         </div>
         <div className="mt-8 border-t border-[#FF9F0D]" />
@@ -56,7 +55,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* About Us */}
         <div>
-          <h3 className="text-2xl font-bold mb-6">About Us.</h3>
+          <h3 className="text-2xl font-bold mb-6">About Us.&apos;</h3>
           <p className="text-white/80 mb-6">
             Corporate clients and leisure travelers has been relying on Groundlink for dependable safe, and professional chauffeured car service in major cities across World.
           </p>
@@ -77,9 +76,9 @@ export default function Footer() {
           <h3 className="text-2xl font-bold mb-6">Useful Links</h3>
           <nav className="space-y-3">
             {['About', 'News', 'Partners', 'Team', 'Menu', 'Contacts'].map((item) => (
-              <Link 
-                key={item} 
-                href="#" 
+              <Link
+                key={item}
+                href="#"
                 className="block text-white/80 hover:text-[#FF9F0D]"
               >
                 {item}
@@ -90,19 +89,19 @@ export default function Footer() {
 
         {/* Help Section */}
         <div>
-          <h3 className="text-2xl font-bold mb-6">Help?</h3>
+          <h3 className="text-2xl font-bold mb-6">Help&amp;?</h3>
           <nav className="space-y-3">
             {[
               'FAQ',
-              'Term & conditions',
+              'Term &amp; conditions',
               'Reporting',
               'Documentation',
               'Support Policy',
               'Privacy',
             ].map((item) => (
-              <Link 
-                key={item} 
-                href="#" 
+              <Link
+                key={item}
+                href="#"
                 className="block text-white/80 hover:text-[#FF9F0D]"
               >
                 {item}
@@ -157,4 +156,3 @@ export default function Footer() {
     </footer>
   )
 }
-

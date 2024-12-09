@@ -38,7 +38,7 @@ export function Navbar() {
             <NavItem href="/blog">Blog</NavItem>
             <NavItem href="/not-found">Pages</NavItem>
             <NavItem href="/aboutSection">About</NavItem>
-            <NavItem href="/ourshop">Shop</NavItem>
+            <NavItem href="/Ourshop">Shop</NavItem>
             <NavItem href="/signupForm">Contact</NavItem>
           </div>
           <div className="flex items-center space-x-4">
@@ -84,7 +84,7 @@ export function Navbar() {
                     <NavItem href="/blog">Blog</NavItem>
                     <NavItem href="/not-found">Pages</NavItem>
                     <NavItem href="/aboutSection">About</NavItem>
-                    <NavItem href="/ourshop">Shop</NavItem>
+                    <NavItem href="/Ourshop">Shop</NavItem>
                     <NavItem href="/signupForm">Contact</NavItem>
                   </nav>
                 </MenuContext.Provider>
